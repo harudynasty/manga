@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<div id="div1"></div>
+    
+<input type="file" multiple onchange="imgloader(this)">
+    
+<script>
+    /*function showType(fileInput) {
+    const files = fileInput.files;
+    for(const i = 0; i < files.length; i++) {
+        const name = files[i].name;
+        const type = files[i].type;
+        alert("Filename: " + name + " , Type: " + type);
+        }
+    }*/
+    let div = document.getElementById("div1");
+    function imgloader(fileInput){
+        let files = fileInput.files;
+        i=0;
+        let interval = setInterval(function(){
+            if(i < files.length){
+                let image = document.createElement('img');
+                image.src = String(files[i].name);
+                div.appendChild(image);
+                console.log(files[i].name);
+                i++;
+            }else{
+                clearInterval(interval);
+            }
+        },100)
+    }
+</script>
+
+</html>

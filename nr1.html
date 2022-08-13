@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<style>
+    html{
+        user-select: none;
+        background-image: url(background.jpg);
+    }
+    img{
+        -webkit-user-drag: none;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+</style>   
+    <select id="selection" onchange="onChange()">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+<script>
+
+    function onChange(){
+        let val = document.getElementById('selection').value;
+        if(val==2){
+            let img = document.createElement('img');
+            img.src = "1_4.jpg";
+            img.style.width = "50%";
+            img.className = "image"; 
+            document.body.appendChild(img);
+        }else if(val==3){
+            let img = document.createElement('img');
+            img.src = "1_4.jpg";
+            img.style.width = "100%";
+            img.className = "image";
+            document.body.appendChild(img);
+        }else if(val==4){
+            var imgRemove = document.getElementsByClassName('image');
+            imgRemove[0].remove();
+        }
+    }
+
+</script>
+</body>
+</html>

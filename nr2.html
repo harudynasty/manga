@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="tclick()">button</button>
+<div id="div1">
+
+</div>
+<script>
+const div = document.getElementById('div1');
+for(let i = 0; i<=10; i++){
+    let img = document.createElement('img');
+    img.src = "1_" + String(i) +".jpg";
+    div.appendChild(img);
+    img.addEventListener("error", function(){
+        event.target.remove();
+    });
+}
+function tclick(){
+    i++;
+    
+}
+
+</script>
+</body>
+</html>

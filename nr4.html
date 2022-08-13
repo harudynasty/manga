@@ -1,0 +1,38 @@
+<script>
+
+    function imageTester(url){
+        let tester = new Image();
+        //tester.addEventListener("load", notLoaded());
+        //tester.addEventListener("error", notFoundImg());
+        tester.onload = notLoaded();
+        tester.onerror = notFoundImg();
+        tester.src = url;
+    }
+    function notLoaded(){
+        console.log("Not loaded");
+    }
+
+    function notFoundImg(){
+        console.log("The image was not found.");
+    }
+
+    imageTester("file:///C:/Users/Administrator/Desktop/manga/");
+
+
+/*function testImage(URL) {
+    var tester=new Image();
+    tester.onload=imageFound;
+    tester.onerror=imageNotFound;
+    tester.src=URL;
+}
+
+function imageFound() {
+    alert('That image is found and loaded');
+}
+
+function imageNotFound() {
+    alert('That image was not found.');
+}
+
+testImage("1_3.jpg");*/
+</script>
