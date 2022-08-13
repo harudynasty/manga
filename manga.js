@@ -44,49 +44,21 @@ function marginChanger(){
     let marginVal = marginLis.value;
     console.log(marginVal);
     let img = div1.getElementsByTagName('img');
-    if(marginVal == 0){
+    if(marginVal == "none"){
         for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin0");
+            img[i].setAttribute("class", "marginNone");
         }
-    }else if(marginVal == 1){
+    }else if(marginVal == "small"){
         for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin1");
+            img[i].setAttribute("class", "marginSmall");
         }
-    }else if(marginVal == 2){
+    }else if(marginVal == "normal"){
         for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin2");
+            img[i].setAttribute("class", "marginNormal");
         }
-    }else if(marginVal == 3){
+    }else if(marginVal == "big"){
         for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin3");
-        }
-    }else if(marginVal == 4){
-        for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin4");
-        }
-    }else if(marginVal == 5){
-        for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin5");
-        }
-    }else if(marginVal == 6){
-        for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin6");
-        }
-    }else if(marginVal == 7){
-        for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin7");
-        }
-    }else if(marginVal == 8){
-        for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin8");
-        }
-    }else if(marginVal == 9){
-        for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin9");
-        }
-    }else if(marginVal == 10){
-        for(let i=0; i<n; i++){
-            img[i].setAttribute("class", "margin10");
+            img[i].setAttribute("class", "marginBig");
         }
     }
 }

@@ -18,48 +18,20 @@ img {
     margin-right: auto;
 }
 
-.margin0 {
+.marginNone {
     margin-bottom: 0px;
 }
 
-.margin1 {
-    margin-bottom: 1px;
-}
-
-.margin2 {
-    margin-bottom: 2px;
-}
-
-.margin3 {
-    margin-bottom: 3px;
-}
-
-.margin4 {
-    margin-bottom: 4px;
-}
-
-.margin5 {
+.marginSmall {
     margin-bottom: 5px;
 }
 
-.margin6 {
-    margin-bottom: 6px;
-}
-
-.margin7 {
-    margin-bottom: 7px;
-}
-
-.margin8 {
-    margin-bottom: 8px;
-}
-
-.margin9 {
-    margin-bottom: 9px;
-}
-
-.margin10 {
+.marginNormal {
     margin-bottom: 10px;
+}
+
+.marginBig {
+    margin-bottom: 40px;
 }
 
 #zoom {
