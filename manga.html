@@ -4,23 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="manga_1.1.js"></script>
-    <link rel="stylesheet" type="text/css" href="manga_1.1.css">
+    <script type="text/javascript" src="manga.js"></script>
+    <link rel="stylesheet" type="text/css" href="manga.css">
     <title>manga</title>
 </head>
 <body>
     <input id="inputforfile" type="file" multiple onchange="imgloader(this)">
-    <select id="margin">
-        <option value="none">none</option>
+    <select id="marginSelect" onchange="marginChanger()">
+        <option value="none" selected>none</option>
         <option value="small">small</option>
         <option value="normal">normal</option>
         <option value="big">big</option>
     </select>
-    <!-- <input type="number" style="width: 35px;" min="0" max="50"> -->
-    <div id="div1">
-        
-    </div>
-    
+    <div id="div1"></div>
 </body>
-    
 </html>

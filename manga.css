@@ -18,21 +18,6 @@ img {
     margin-right: auto;
 }
 
-.marginNone {
-    margin-bottom: 0px;
-}
-
-.marginSmall {
-    margin-bottom: 5px;
-}
-
-.marginNormal {
-    margin-bottom: 10px;
-}
-
-.marginBig {
-    margin-bottom: 40px;
-}
 
 #zoom {
     max-width: 200%;
