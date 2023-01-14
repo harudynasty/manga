@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-    </head>
+
 <body>
-
-
-
-
-<div id="div1">
-
-
-
-</div>
-
-</body>
+<div id="div1"></div>
+    
+<input type="file" multiple onchange="imgloader(this)">
+    
 <script>
-    let div = document.getElementById('div1');
-    let image = document.createElement('img');
-    image.src = "1_4.jpg";
-    document.body.appendChild(image);
+    let div = document.getElementById("div1");
+    function imgloader(fileInput){
+        let files = fileInput.files;
+        console.log(files);
+        console.log(files[1].type);
+        let i=0;
+        let interval = setInterval(function(){
+            if(i < files.length){
+                let image = document.createElement('img');
+                image.src = String(files[i].name);
+                div.appendChild(image);
+                console.log(files[i].name);
+                i++;
+            }else{
+                clearInterval(interval);
+            }
+        },100)
+    }
 </script>
+
 </html>

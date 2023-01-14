@@ -1,0 +1,39 @@
+body {
+    user-select: none;
+    -webkit-user-drag: none;
+    background-image: url("background.jpg");
+    
+}
+
+div {
+    text-align: center;
+    
+}
+
+img {
+    padding: none;
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.marginNone {
+    margin-bottom: 0px;
+}
+
+.marginSmall {
+    margin-bottom: 5px;
+}
+
+.marginNormal {
+    margin-bottom: 10px;
+}
+
+.marginBig {
+    margin-bottom: 40px;
+}
+
+#zoom {
+    max-width: 200%;
+}

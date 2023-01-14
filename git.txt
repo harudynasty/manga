@@ -1,0 +1,1 @@
+git add manga.html nr1.html nr2.html nr3.html nr4.html nr5.html manga.css jquery-3.6.0.min.js manga.js background.jpg

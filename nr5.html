@@ -18,7 +18,9 @@
     let div = document.getElementById("div1");
     function imgloader(fileInput){
         let files = fileInput.files;
-        i=0;
+        console.log(files);
+        console.log(files[1].type);
+        let i=0;
         let interval = setInterval(function(){
             if(i < files.length){
                 let image = document.createElement('img');
