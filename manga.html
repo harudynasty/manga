@@ -9,13 +9,25 @@
     <title>manga</title>
 </head>
 <body>
-    <input id="inputforfile" type="file" multiple onchange="imgloader(this)">
-    <select id="marginSelect" onchange="marginChanger()">
-        <option value="none" selected>none</option>
-        <option value="small">small</option>
-        <option value="normal">normal</option>
-        <option value="big">big</option>
-    </select>
+    <div id="buttons-section">
+        <input id="inputforimg" type="file" multiple onchange="imgloader(this)">
+
+        <button onclick="fullscreenEnter()">fullscreen</button>
+        <button onclick="fullscreenExit()">exit</button>
+        
+        <select id="marginSelect" onchange="marginChanger()">
+            <option value="none" selected>none</option>
+            <option value="small">small</option>
+            <option value="normal">normal</option>
+            <option value="big">big</option>
+        </select>
+
+        <img id="fsButton" src="fullscreen.png">
+
+    </div>
     <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    
 </body>
 </html>

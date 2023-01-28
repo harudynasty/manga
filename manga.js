@@ -4,16 +4,19 @@ function imgloader(fileInput){
     let i=0;
     let interval = setInterval(function(){
         if(i < files.length){
+            console.log(files.length);
             let image = document.createElement('img');
-            image.src = String(files[i].name);
+            image.src = "superhumanera/c003/" + String(files[i].name);
             div.appendChild(image);
             i++;
         }else{
+
+                $("#inputforimg").remove();
+
             clearInterval(interval);
         }
     },100)
 }
-
 
 function marginChanger(){
     let marginVal = document.getElementById("marginSelect").value;
@@ -32,3 +35,61 @@ function marginChanger(){
     }
     
 }
+
+function fullscreenEnter(){
+    let elem = document.documentElement;
+    if(elem.requestFullscreen) {
+        elem.requestFullscreen();
+    }else if(elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+    }else if(elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    }else if(elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+    }
+}
+
+function fullscreenExit(){
+    if(document.exitFullscreen) {
+        document.exitFullscreen();
+    }else if(document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+    }else if(document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+    }else if(document.msExitFullscreen) {
+        document.msExitFullscreen();
+    }
+}
+
+
+
+$(document).ready(function(){
+
+
+$("#div3").hover(
+    function(){
+        var intervalId = setInterval(function(){
+            window.scrollBy(0, 50);
+        }, 40);
+        $(this).data("intervalId", intervalId);
+    }, 
+    function(){
+        clearInterval($(this).data("intervalId"));
+    }
+);
+
+$("#div2").hover(
+    function(){
+        var intervalId = setInterval(function(){
+            window.scrollBy(0, -50);
+        }, 40);
+        $(this).data("intervalId", intervalId);
+    }, 
+    function(){
+        clearInterval($(this).data("intervalId"));
+    }
+);
+
+
+
+});
